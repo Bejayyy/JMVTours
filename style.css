@@ -669,15 +669,14 @@ header a{
 /* arrows */
 .arrows{
     position: absolute;
-    top: 80%;
-    right: 52%;
+    top: 75%;
+    right: 20%;
     z-index: 100;
     width: 300px;
     max-width: 30%;
     display: flex;
     gap: 10px;
     align-items: center;
-    opacity: 0;
 }
 .arrows button{
     width: 40px;
