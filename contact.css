@@ -16,11 +16,77 @@
 }
 nav{
     position: absolute;
+    display: flex;
     z-index: 999;
-    padding: 10px;
+    width: 100%;
+    padding: 20px 0 0 0;
+    height: 25vh;
 }
-nav img{
-    margin-left: 5vw;
+nav .logo{
+    position: absolute;
+    top: -3vh;
+    height: 100%;
+    left: 12vw;
+    padding: 30px 10px 15px 10px;
+    background-color: #FCFDF8;
+    border: 3px solid #04284D;
+    border-radius: 0 0 50px 50px;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+nav ul{
+    display: flex;
+    position: absolute;
+    right: 5vw;
+    gap: 2vw;
+    top: 0;
+    height: 20%;
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+nav ul li {
+    list-style: none;
+    height: 100%;
+    display: flex; /* Align items vertically in the li */
+    align-items: center; /* Center items vertically */
+    justify-content: center;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    align-items: center; /* Center items vertically */
+    font-family: "Bigshot One", serif;
+    font-size: 1.2rem;
+
+}
+.home{
+    background-color: #04284D;
+    width: 13vw;
+    height: 100%;
+    text-align: center;
+    padding: 20px 0 10px 0;
+    border-radius: 0 0 30px 30px;
+}
+.contact{
+    background-color: #ffffff;
+    width: 13vw;
+    height: 100%;
+    text-align: center;
+    padding: 20px 0 10px 0;
+    border-radius: 0 0 30px 30px;
+
+}
+.contact a{
+    color: #04284D;
+
+}
+.contact a:hover,
+.home a:hover{
+    color: #FEAD5F;
+
 }
 .header{
     position: absolute;
