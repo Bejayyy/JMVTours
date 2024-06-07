@@ -2,9 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Jacques+Francois&family=Orelega+One&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
 
-
-
-
 *{
     padding: 0;
     margin: 0;
@@ -15,6 +12,9 @@ body{
     justify-content: center;
     align-items: center;
     font-family: Poppins;
+}
+html{
+    scroll-behavior: smooth;
 }
 nav{
     background-color: #04284D;
@@ -41,6 +41,9 @@ ul li a{
     color: white;
     font-family: "Gurajada", sans-serif;
     font-size:1.5rem;
+}
+ul li a:hover{
+    color: #FEAD5F;
 }
 .landing-page{
     top: 0;
@@ -105,15 +108,18 @@ ul li a{
         
 }
 .section{
-    margin-top:288vh;
+    margin-top: 395vh;
     width: 100%;
+    height: 300vh;
     position: absolute;
 }
 .section .section-background{
     width: 100%;
+    height: 100%;
 }
 .section-background img{
     width: 100%;
+    height: 100%;
 }
 .offer .phone {
     position: absolute;
@@ -251,7 +257,7 @@ ul li a{
 }
 .text{
     position: absolute;
-    margin-top: 262vh;
+    margin-top: 280vh;
     text-align: center;
     width: 70vw;
 }
@@ -263,7 +269,7 @@ ul li a{
 }
 .cebu-offers-4pic{
     position: absolute;
-    margin-top: 380vh;
+    margin-top: 410vh;
     width: 80%;
     gap: 3vh;
     display: flex;
@@ -524,8 +530,25 @@ ul li a{
 .pic4 {
     width: calc(50% - 1vw);
 }
+.find-out{
+    position: absolute;
+    text-align: center;
+    margin-top: 522vh;
 
+}
+.find-out h2 i{
+    font-family: "Sansita", sans-serif;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 600;
+    
+}
+.find-out h1{
+    font-size: 3rem;
+    font-weight: 600;
+   
 
+}
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rancho&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rancho&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
@@ -534,8 +557,8 @@ ul li a{
 
 .carousel1{
     position: absolute;
-    margin-top: 590vh;
-    
+    margin-top: 650vh;
+    width: 100%;
 }
 a{
     text-decoration: none;
@@ -558,7 +581,7 @@ header a{
 .carousel{
     height: 100vh;
     margin-top: -50px;
-    width: 98.9vw;
+    width: 100%;
     overflow: hidden;
     position: relative;
 }
@@ -851,3 +874,335 @@ header a{
         font-size: 30px;
     }
 }
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Jacques+Francois&family=Orelega+One&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Smythe&display=swap');
+.section2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: 842vh;
+}
+.section2 .section2-bg{
+    position: absolute;
+    margin-top: -.8vh;
+}
+.section2-bg img{
+    width: 100%;
+    height: 100%;
+}
+.section2 .header{
+    position: absolute;
+    padding: 10px;
+    right: 2vw;
+    margin-top: 15vh;
+    z-index: 999;
+}
+.header h1{
+    font-family: "Sansita", sans-serif;
+    font-size: 4.5rem;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: .5px;
+    z-index: 999;
+}
+.package-description {
+    margin-top: 35vh;
+    text-align: justify;
+    width: 82vw;
+    position: absolute;
+    right: 1vw;
+    color: #FCFDF8;
+
+}
+.package-description p{
+    font-family: "Jacques Francois", serif;
+    font-size: 1.39rem;
+}
+.wrapper {
+    max-width: 95%;
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 70%;
+  }
+  .wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+  .wrapper i:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+  .wrapper i:first-child{
+    left: -22px;
+  }
+  .wrapper i:last-child{
+    right: -22px;
+  }
+  .wrapper .carousel-package{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  
+  }
+  .carousel-package::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel-package.no-transition {
+    scroll-behavior: auto;
+  }
+  .carousel-package.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .carousel-package.dragging .card {
+    cursor: grab;
+    user-select: none;
+  }
+  .carousel-package :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel-package .card {
+    scroll-snap-align: start;
+    list-style: none;
+    cursor: pointer;
+    flex-direction: column;
+    border-radius: 8px;
+    
+  }
+  .carousel-package .card .img {
+    height: 100%;
+    width: 100%;
+  }
+  .card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .carousel-package .card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+  }
+  .carousel-package .card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+  }
+ 
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  
+  .overlay-img {
+    max-width: 90%;
+    max-height: 90%;
+  }
+  
+  .exit {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  .Dream-Section{
+    position: absolute;
+    margin-top: 1050vh;
+    width: 100%;
+  }
+  .Dream{
+    background-image: linear-gradient(to bottom, #FCFDF8, #0E3638);
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+}
+.Dream .Dream-Text{
+    text-align: center;
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+}
+.Dream-Text p{
+    color: #0E3638;
+    font-family: "Tienne", serif;
+    font-weight: 500;
+}
+.Dream-line{
+    position: absolute;
+    background-color: #FCFDF8;
+    height: .5vh;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+}
+.Dream-Text span{
+    position: absolute;
+    font-family: "Bebas Neue", sans-serif;
+    color: #E9EDE9;
+    font-size: 2rem;
+    margin-top: 7vh;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.cars{
+    position: absolute;
+    width: 100%;
+    top: 650%;
+    height: 200vh;
+}
+.cars-header{
+    padding: 0 0 0 20px;
+}
+.cars-header h1{
+    font-family: "Sansita", sans-serif;
+    font-size: 4rem;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: .5px;
+    z-index: 999;
+}
+.cars-description{
+    padding: 20px;
+    width: 80%;
+}
+.cars-description p{
+    color: #000000;
+    font-family: "Jacques Francois", serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.car-types{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -25vh;
+}
+.car-container{
+    flex-wrap: wrap;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+}
+.car-container div{
+    border: 2px solid white;
+    padding: 20px;
+    width: 10%;
+    height: 10%;
+    
+}
+.car-container div img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.cars-background .Innova-bg{
+    width: 100%;
+}
+.Innova-bg .BG,
+.black-bg .BG,
+.brown-bg .BG,
+.Hiace-bg .BG{
+    width: 100%;
+}
+.Innova-bg .innova-car{
+    position: absolute;
+    width: 50%;
+    margin-top: 12vh;
+    left: 0;
+}
+
+.Innova-bg span{
+    position: absolute;
+    right: 10vw;
+    top: 25vw;
+    font-family: "Bigshot One", serif;
+    font-size: 2rem;
+}
+.black-bg .black-car{
+    left: 0;
+    margin-top: 10vh;
+    position: absolute;
+}
+.brown-bg .brown-car{
+    position: absolute;
+    left: 0;
+    top: 60vh;
+    
+}
+.Hiace-bg .Hiace-car{
+    position: absolute;
+    left: 0;
+    top: 50vh;
+}
+.car-types .car-container div {
+    border: 2px solid #ccc; /* Initial border style */
+    padding: 10px; /* Adjust as necessary */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+}
+
+.car-types .car-container .active {
+    background-color: rgba(155, 149, 149, 0.5); /* Background color with opacity */}
+
+.cars-background > div {
+    display: none; /* Hide all backgrounds by default */
+}
+
+.cars-background > .active-bg {
+    display: block; /* Display only the active background */
+}
+
+
+  @media screen and (max-width: 900px) {
+    .wrapper .carousel-package{
+      grid-auto-columns: calc((100% / 2) - 9px);
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .wrapper .carousel-package {
+      grid-auto-columns: 100%;
+    }
+  }
