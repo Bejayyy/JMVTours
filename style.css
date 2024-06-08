@@ -884,6 +884,7 @@ header a{
 .section2 .section2-bg{
     position: absolute;
     margin-top: -.8vh;
+    width: 100%;
 }
 .section2-bg img{
     width: 100%;
