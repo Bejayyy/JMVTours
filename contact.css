@@ -25,12 +25,12 @@ nav{
 nav .logo{
     position: absolute;
     top: -3vh;
-    height: 100%;
+    height: 110%;
     left: 12vw;
     padding: 30px 10px 15px 10px;
     background-color: #FCFDF8;
     border: 3px solid #04284D;
-    border-radius: 0 0 50px 50px;
+    border-radius: 0 0 100% 100%;
 }
 .logo img{
     width: 100%;
@@ -225,7 +225,7 @@ footer{
     top: 35%;
 }
 .heading-text h1{
-    font-family: "Oregano", cursive;
+    font-family: "Oregano";
     font-size: 3rem;
 }
 .contact-details{
