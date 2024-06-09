@@ -1282,7 +1282,7 @@ header a{
 .faq-section{
     position: absolute;
     width: 100%;
-    margin-top: 2000vh;
+    margin-top: 1970vh;
 }
 .faq-background{
     width: 100%;
@@ -1368,15 +1368,28 @@ header a{
   letter-spacing: 60px;
   font-size:10vw;
   color: #fff;
-  text-shadow: 2px 2px 10px black; /* 2px right, 2px down, 4px blur */
+    text-shadow: 2px 2px 10px black; /* 2px right, 2px down, 4px blur */
+}
 
-    
-  }
+.carousel .list .item .des::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    z-index: -1; /* Place it behind the text */
+    border-radius: 10px; /* Optional: to make it look nicer */
+}
+
+  
 
   .customer-say{
     position: absolute;
     width: 100%;
-    top: 1100%;
+    top: 1140%;
   }
   .customer-say-background img{
     width: 100%;
@@ -1455,7 +1468,7 @@ header a{
 .last-section{
     width: 100%;
     position: absolute;
-    margin-top: 1190%;
+    margin-top: 1150%;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -1649,7 +1662,7 @@ footer{
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin-top: 29vh;
+    margin-top: 31vh;
 }
 .footer-nav ul {
     border-top: 2px solid black;
