@@ -1368,6 +1368,9 @@ header a{
   letter-spacing: 60px;
   font-size:10vw;
   color: #fff;
+  text-shadow: 2px 2px 10px black; /* 2px right, 2px down, 4px blur */
+
+    
   }
 
   .customer-say{
