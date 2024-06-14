@@ -290,3 +290,19 @@ setInterval(autoSlide, 3000); // Change slide every 3 seconds
         // Show the initial background for the first car type (Innova)
         showBackground('Innova');
     });
+
+// script.js
+document.addEventListener('DOMContentLoaded', function () {
+    const menuIcon = document.getElementById('menu-icon');
+    const navBar = document.getElementById('nav-bar');
+
+    menuIcon.addEventListener('click', function () {
+        if (navBar.style.display === 'block') {
+            navBar.style.display = 'none';
+        } else {
+            navBar.style.display = 'block';
+        }
+    });
+});
+
+

@@ -332,6 +332,8 @@ ul li a:hover{
 .pic1 .img-name span{
     color: white;
     font-family: "Orelega One", serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 1.4rem;
 }
 .pic1:hover .pic1-description {
@@ -651,8 +653,7 @@ header a{
     left: -10%;
     width: 120%;
     height: 120%;
-    background: rgba(0, 0, 0, 0.356); /* Semi-transparent background */
-    backdrop-filter: blur(1px); /* Blur effect */
+    background: rgb(0, 0, 0); /* Semi-transparent background */
     z-index: -1; /* Place it behind the text */
 }
 
@@ -719,7 +720,7 @@ header a{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #eee4;
+    background-color: rgba(48, 46, 46, 0.795);
     border: none;
     color: #fff;
     font-family: monospace;
@@ -954,6 +955,7 @@ header a{
     box-shadow: 0 3px 6px rgba(0,0,0,0.23);
     transform: translateY(-50%);
     transition: transform 0.1s linear;
+  
   }
   .wrapper i:active{
     transform: translateY(-50%) scale(0.85);
@@ -997,6 +999,7 @@ header a{
   }
   .carousel-package .card {
     scroll-snap-align: start;
+   
     list-style: none;
     cursor: pointer;
     flex-direction: column;
@@ -1180,6 +1183,13 @@ header a{
     font-family: "Bigshot One", serif;
     font-size: 2rem;
 }
+.Hiace-bg span{
+    position: absolute;
+    right: 10vw;
+    top: 35vw;
+    font-family: "Bigshot One", serif;
+    font-size: 2rem;
+}
 .black-bg .black-car{
     left: 0;
     margin-top: 10vh;
@@ -1290,6 +1300,7 @@ header a{
 .faq-background img{
     width: 100%;
 }
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .faq-wrapper {
@@ -1378,10 +1389,9 @@ header a{
     left: -10%;
     width: 120%;
     height: 120%;
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
     backdrop-filter: blur(10px); /* Blur effect */
     z-index: -1; /* Place it behind the text */
-    border-radius: 10px; /* Optional: to make it look nicer */
 }
 
   
@@ -1501,7 +1511,7 @@ header a{
 .line1, .line2{
     background-color: black;
     height: .3vh;
-    width: 80vw;
+    width: 50vw;
     justify-self: center;
 }
 .line1{
@@ -1528,6 +1538,9 @@ footer{
     transform: translateX(-50%);
     top: 46%;
 }
+.nav-arrows{
+    display: none;
+}
 .heading-text h1{
     font-family: "Oregano", cursive;
     font-size: 400;
@@ -1537,12 +1550,12 @@ footer{
     position: absolute;
     top:58%;
     flex-wrap: wrap; /* Allow flex items to wrap to the next line */
-    width: 80%;
+    width: 55vw;
     display: flex;
     align-items: center;
     justify-content: center; 
     z-index: 999;
-    gap: 10vw;
+    gap: 3vw;
 }
 .bg-image img{
     width: 100%;
@@ -1665,7 +1678,7 @@ footer{
 .footer-nav ul {
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    width: 80vw;
+    width: 50vw;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -1676,64 +1689,455 @@ footer{
 }
 
 
-
-
-
-
-
-
-
-
-    @media screen and (max-width: 900px) {
-    .wrapper .carousel-package{
-      grid-auto-columns: calc((100% / 2) - 9px);
-    }
-    .choose-container {
-        flex-direction: column;
-        gap: 2vw;
-    }
-
-    .choose-container div img,
-    .customize img, .family img, .guidance img {
-        width: 80%;
-        height: auto;
-    }
-
-    .customize .customize-description,
-    .family .family-description,
-    .guidance .guidance-description {
-        width: 60%;
-        margin-top: 10vh;
-    }
+.cp-nav{
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10vw;
+    padding: 3vh 1vw 1vh 1vw;
+    border-radius: 0px 0px 100px 100px;
     
-    
-    .choose-container1 {
-        flex-direction: column;
-        gap: 2vw;
-    }
+}
+.cp-nav-container{
+    display: none;
+}
 
-    .choose-container1 div img,
-    .customize1 img, .family1 img, .guidance1 img {
-        width: 80%;
-        height: auto;
+.hamburger i {
+    cursor: pointer;
+    font-size: 6vw;
+}
+.cp-nav ul {
+    list-style: none;
+    padding: 0;
+    display: none; /* Initially hide the list */
+    position: absolute;
+    top: 30px;
+    right: 10vw;
+    background: #0D316B;
+    border: 1px solid #ccc;
+    z-index: 999;
+    width: 30vw;
+}
+.cp-nav ul.show {
+    display: block; /* Show the list when the 'show' class is added */
     }
+.cp-nav i{
+    color: #0D316B;
+    cursor: pointer;
+}
 
-    .customize1 .customize-description1,
-    .family1 .family-description1,
-    .guidance1 .guidance-description1 {
-        width: 80%;
-        margin-top: 10vh;
-    }
-  }
+.cp-nav  ul li {
+    padding: 20px;
+    text-align: center;
+}
+.cp-nav ul li :hover{
+    background-color: #0D316B;
+}
+
+.cp-logo{
+    position: absolute;
+    left: 5vw;
+    top: -2vh;
+    background-color: #FCFDF8;
+    border: 3px solid #04284D;
+    display: none;
+    padding: 20px 2px 10px 2px;
+    width: 20vw;
+    border-radius: 0 0 100px 100px;
+}
+
+
+.cp-logo img{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+.expand{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    top: 140%;
+}
+.expand h1{
+    color: #000000;
+    font-size: 1rem;
+}
+
+   
   
-  @media screen and (max-width: 600px) {
-    .wrapper .carousel-package {
-      grid-auto-columns: 100%;
+  
+@media only screen and (max-width: 768px) {
+     
+    nav{
+        display: none;
     }
+    .cp-nav{
+        
+        background-color: #fff;
+    }
+    .cp-nav-container{
+        display: block;
+    }
+    .cp-logo{
+        display: block;
+    }
+    .landing-page{
+        height: 43vh;
+        width: 100%;
+        top: 10vh;
+        position: absolute;
+    }
+    .landing-page img{
+        width: 100%;
+        height: 100%;
+    }
+    .offer{
+        margin-top: 130vh;
+        height: 40vh;
+    }
+    .offer .phone{
+        height: 35vh;
+        margin-left: -20px;
+    }
+    .car{
+        margin-top: 15vh;
+    }
+    .text-offer{
+        height: 36vh;
+        border-radius: 25px;
+        padding: 10px;
+        z-index: 0;
+        background-color: #05040425;
+    }
+    .text-offer .header{
+        margin-bottom: 0;
+    }
+    .text-offer .header span i{ 
+        font-size: 1rem;
+    }
+    .text-offer .des span{
+        font-size: .8rem;
+    }
+    .text-offer .des p{
+        font-size: .8rem;
+    }
+    .read-more{
+        margin-top: -1vh;
+        padding: 0;
+        width: 13vw;
+        height: 3.4vh;
+        border-radius:23px;
+    }
+    .read-more span i {
+        font-size: .5rem;
+    }
+    
+    .section{
+        margin-top: 250vh;
+        height: 150vh;
+    }
+    .carousel1{
+        margin-top: 440vh;
+    }
+
+    .text-offer .des{
+        margin-top: 1vh;
+    }
+    .text{
+        margin-top: 190vh;
+        width: 90%;
+        padding: 10px;
+    }
+    .text p{
+        font-size: 1rem;
+    }
+    .cebu-offers-4pic {
+        margin-top:250vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        gap: 10px; /* Adjust the gap between the pictures as needed */
+        width: 100%;
+    }
+    .cebu-offers-4pic > div {
+        width:90%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .cebu-offers-4pic img {
+        width: 100%;
+        height: auto;
+    }
+    .pic1 .img-name span, .pic2 .img-name2 span, .pic3 .img-name3 span, .pic4 .img-name4 span{
+        font-size: .8rem;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 1px;
+    }
+    .find-out{
+        margin-top: 310vh;
+    }
+    .find-out h2 i {
+        font-family: "Amethysta", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3rem;
+    }
+
+    .carousel1 .topic{
+        font-size: 1rem;
+    font-weight: bold;
+    font-family: Poppins;
+    width: 100%;
+    text-align: center;
+    }
+    .carousel .list .item .topic{
+        margin-top:-15vh;
+        font-size: 3rem;
+    }
+    .thumbnail{
+        position: absolute;
+        bottom: 50px;
+        left: 40%;
+        width: max-content;
+      
+        gap: 15px;
+    }
+    .thumbnail .item{
+        width: 100px;
+        height: 150px;
+       
+    }
+    .carousel .list .item .buttons{
+        position: absolute;
+        margin-top: 30px;
+    }
+
+    .carousel .list .item .des {
+        text-align: center;
+        margin-top: 5vh;
+        font-size: 1rem;
+        font-family: Poppins;
+        text-shadow: 2px 2px 4px black; /* 2px right, 2px down, 4px blur */
+        position: relative; /* Ensure the pseudo-element is positioned relative to the text */
+    }
+    #Magellan, #simala{
+        font-size: 2.3rem;
+    }
+    .arrows{
+        top: 78vh;
+        left: 15vw;
+    }
+
+    .section2{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin-top: 640vh;
+    }
+    .section2 .section2-bg{
+        position: absolute;
+        width: 100%;
+        height: 110vh;
+    }
+    .section2 .header{
+        margin-top: 8vh;
+    }
+    .header h1{
+        font-size: 2rem;
+    }
+    .package-description{
+        width: 90vw;
+        margin-top: 20vh;
+    }
+    .package-description p{
+        font-size: 1rem;
+    }
+    .wrapper {
+        top: 60%;
+    }
+    .wrapper i{
+        font-size: 1rem;
+    
+
+    }
+
+    .expand{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 53%;
+        text-align: center;
+        width: 80%;
+    }
+    .expand h1{
+        color: #fff;
+        font-size: 1rem;
+    }
+    
+    .Dream-Section{
+        margin-top: 750vh;
+    }
+    .Dream .Dream-Text{
+        width: 80%;
+        top: 28%;
+    }
+    .Dream-Text p{
+        font-size: .9rem;
+        font-weight: 600;
+    }
+    .Dream-Text span{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+    .cars{
+        top: 450%;
+    }
+    .cars-header h1{
+        font-size: 2.5rem;
+    }
+    .cars-description{
+        width: 90%;
+    }
+    .cars-description p{
+        font-size: 1.2rem;
+    }
+   
     .choose-container1 {
         flex-direction: column;
         gap: 3vw;
     }
+    .carousel .card .img {
+        height: 148px;
+        width: 148px;
+        border-radius: 50%;
+      }
+    .cars-background{
+        height: 100vh;
+    }  
+    .cars-background .Innova-bg,
+    .cars-background .black-bg,
+    .cars-background .brown-bg,
+    .cars-background .Hiace-bg{
+        height: 80vh;
+    }
+    .cars-background .innova-car,
+    .cars-background .black-car,
+    .cars-background .brown-car,
+    .cars-background .Hiace-car{
+        display: none;
+    }
+    .nav-arrows {
+        position: absolute;
+        top: 60%;
+        width: 95%;
+        display: flex;
+        left: 50%;
+        justify-content: space-between;
+       
+        transform: translateX(-50%);
+    }
+    
+    .arrow {
+        background-color: rgba(255, 255, 255, 0.452);
+        border: none;
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 100px;
+        width: 50px;
+        height: 50px;
+    }
+    .right-arrow{
+        right: 0;
+    }
+    
+    .arrow:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+  
+    .car-types{
+        margin-top: -40vh;
+    }
+  
+    .car-types .car-container div{
+        border: 0px;
+        width:74vw;
+        height: 40vh;
+    }
+    .car-types .car-container .active{
+        background-color: #00000000;
+    }
+    .cars-background .Innova-bg .BG,
+    .cars-background .black-bg .BG,
+    .cars-background .brown-bg .BG,
+    .cars-background .Hiace-bg .BG{
+        width: 100%;
+        height: 100%;
+    }
+   
+    .cars-background > div,
+    .car-types > div > div {
+        display: none;
+    }
+    
+    .cars-background > div.active-bg,
+    .car-types > div > div.active {
+        display: block;
+    }
+    .nav-arrows button{
+        position: absolute;
+    }
+    .nav-arrows button:hover{
+        cursor: pointer;
+        color: #fff;
+    }
+    .Innova-bg span{
+        position: absolute;
+        left:50%;
+        transform: translateX(-50%);
+        top: 85vw;
+        width: 55vw;
+        text-align: center;
+        font-size: 1.6rem;
+    }
+    .Hiace-bg span{
+        position: absolute;
+        left:50%;
+        transform: translateX(-50%);
+        top: 85vw;
+        width: 70vw;
+        text-align: center;
+        font-size: 1.6rem;
+    }
+    .nav-arrows{
+        display: block;
+    }
+
+    
+    .choose-us-title{
+        text-align: center;
+        width: 100%;
+    }
+    .choose-us-title h1{
+    font-size: 2.7rem;
+    }
+    .choose-container{
+        margin-top: 25vh;
+    }
+    .customize-description h1, .family-description h1, .guidance-description h1 {
+    }
+
+
+
+
+     
 
     .choose-container1 div img,
     .customize1 img, .family1 img, .guidance1 img {
@@ -1758,5 +2162,46 @@ footer{
     .customize1 span, .family1 span, .guidance1 span{
         font-size: 25vw;
         margin-top: -20vh;
+    }
+  }
+ @media screen and (max-width: 900px) {
+    .wrapper .carousel-package{
+      grid-auto-columns: calc((100% / 2) - 9px);
+    }
+    .choose-container {
+        flex-direction: column;
+        gap: 2vw;
+    }
+
+    .choose-container div img,
+    .customize img, .family img, .guidance img {
+        width: 80%;
+        height: auto;
+    }
+
+    .customize .customize-description,
+    .family .family-description,
+    .guidance .guidance-description {
+        width: 60%;
+        margin-top:0vh;
+    }
+    
+    
+    .choose-container1 {
+        flex-direction: column;
+        gap: 2vw;
+    }
+
+    .choose-container1 div img,
+    .customize1 img, .family1 img, .guidance1 img {
+        width: 80%;
+        height: auto;
+    }
+
+    .customize1 .customize-description1,
+    .family1 .family-description1,
+    .guidance1 .guidance-description1 {
+        width: 80%;
+        margin-top: 10vh;
     }
   }

@@ -36,13 +36,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amethysta&display=swap" rel="stylesheet">
     <title>JMV tours</title>
 </head>
 <body>
+    <div class="cp-nav">
+        <div class="cp-nav-container">
+
+       
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul>
+                <li><a href="#">Home </a></li>
+                <li><a href="#packages">Package</a></li>
+                <li><a href="#cars">Cars</a></li>
+                <li><a href="#FAQ">FAQ</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('ul').classList.toggle('show');
+        });
+    </script>
+    <div class="cp-logo">
+            <img src="images/car logo 1 (1).png" alt="">
+        
+    </div>
     <div class="landing-page" id="Home">
         <img src="images/1.png" alt=""  class="active">
         <img src="images/2.png" alt="">
-        <img src="images/3.png" alt="">
+        <img src="images/4.png" alt="">
     </div>
     <nav>
         <ul>
@@ -158,6 +187,7 @@
             </div>
         </div>
     </div>
+    
     <div class="find-out">
         <h2>
             <i>Find Out Most Popular Destinations</i>
@@ -186,7 +216,7 @@
             <div class="item">
                 <img src="images/Untitled design - 11.png">
                 <div class="content">
-                    <div class="topic"> Magellan’s Cross Pavillion</div>
+                    <div class="topic" id="Magellan"> Magellan’s Cross Pavillion</div>
                     <div class="des">
                         <!-- lorem 50 -->
                         The Magellan's Cross Pavilion offers a captivating glimpse into Cebu's rich history and cultural heritage, providing a serene sanctuary amidst the bustling streets of Cebu City. Nestled within a beautifully landscaped plaza, this iconic pavilion serves as a solemn tribute to the arrival of Christianity in the Philippines and the enduring legacy of Ferdinand Magellan's historic voyage.
@@ -234,7 +264,7 @@
             <div class="item">
                 <img src="images/Untitled design - 14.png">
                 <div class="content">
-                    <div class="topic"> The Simala Shrine</div>
+                    <div class="topic" id="simala"> The Simala Shrine</div>
                     <div class="des">
                         <!-- lorem 50 -->
                         Whether you're a devout follower of Taoism, a curious traveler seeking to expand your horizons, or simply someone in search of inner peace and spiritual renewal, the Cebu Taoist Temple offers a sanctuary for the soul and a refuge from the chaos of modern life. Step into its hallowed halls, and let the wisdom of the ages wash over you, as you embark on a journey of self-discovery and enlightenment amidst the timeless beauty of this sacred site.
@@ -365,6 +395,9 @@
         <div class="package-description">
             <p>Discover the enchanting beauty of Cebu with our exclusive tour packages! Immerse yourself in breathtaking landscapes, vibrant culture, and exhilarating adventures. From pristine beaches to historic landmarks, we've curated the perfect experiences to make your Cebu getaway unforgettable. Book now and let the adventure begin!</p>
         </div>
+        <div class="expand">
+            <h1>( Tap image to expand/fullscreen! )</h1>
+        </div>
         <div class="wrapper">
             <i id="left" class="fa-solid fa-angle-left"></i>
             <ul class="carousel-package">
@@ -438,6 +471,7 @@
             <div class="Hiace-bg">
                 <img class="BG" src="images/Hiace-bg.png" alt="">
                 <img class="Hiace-car" src="images/Hiace.png" alt="">
+                <span>Toyota Hiace Super Grandia 2024</span>
             </div>
         </div>
     
@@ -457,7 +491,10 @@
                 </div>
             </div>
         </div>
-    
+        <div class="nav-arrows">
+            <button class="arrow left-arrow">&#10094;</button>
+            <button class="arrow right-arrow">&#10095;</button>
+        </div>
         <script>
         document.addEventListener('DOMContentLoaded', function() {
             const carContainers = document.querySelectorAll('.car-container div');
@@ -493,6 +530,38 @@
             // Show the initial background for the first car type (Innova)
             showBackground('Innova');
         });
+
+        
+            document.addEventListener('DOMContentLoaded', function () {
+                const carTypes = document.querySelectorAll('.car-types .car-container > div');
+                const carBackgrounds = document.querySelectorAll('.cars-background > div');
+                const leftArrow = document.querySelector('.left-arrow');
+                const rightArrow = document.querySelector('.right-arrow');
+                let currentIndex = 0;
+        
+                function updateActiveCar(index) {
+                    // Remove active class from all car types and backgrounds
+                    carTypes.forEach((car, i) => {
+                        car.classList.toggle('active', i === index);
+                        carBackgrounds[i].classList.toggle('active-bg', i === index);
+                    });
+                }
+        
+                leftArrow.addEventListener('click', function () {
+                    currentIndex = (currentIndex === 0) ? carTypes.length - 1 : currentIndex - 1;
+                    updateActiveCar(currentIndex);
+                });
+        
+                rightArrow.addEventListener('click', function () {
+                    currentIndex = (currentIndex === carTypes.length - 1) ? 0 : currentIndex + 1;
+                    updateActiveCar(currentIndex);
+                });
+        
+                // Initialize the first car type as active
+                updateActiveCar(currentIndex);
+            });
+        
+        
         </script>
         
 
